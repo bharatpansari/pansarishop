@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>pansari.shop – Premium Domain For Sale</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  :root{
+    --green:#2d6a4f;
+    --green-light:#52b788;
+    --green-pale:#d8f3dc;
+    --cream:#f9f5f0;
+    --dark:#1a1a1a;
+    --gray:#6b7280;
+    --white:#fff;
+  }
+  body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--cream);color:var(--dark);}
+
+  /* NAV */
+  nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 5%;background:var(--white);box-shadow:0 1px 8px rgba(0,0,0,.07);position:sticky;top:0;z-index:100;}
+  .logo{font-size:1.3rem;font-weight:700;color:var(--green);letter-spacing:-.5px;}
+  .logo span{color:var(--green-light);}
+  nav a{background:var(--green);color:#fff;padding:.5rem 1.2rem;border-radius:50px;font-size:.85rem;font-weight:600;text-decoration:none;transition:background .2s;}
+  nav a:hover{background:var(--green-light);}
+
+  /* HERO */
+  .hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 5%;background:linear-gradient(135deg,#e9f5ee 0%,var(--cream) 60%);}
+  .badge{display:inline-block;background:var(--green-pale);color:var(--green);padding:.35rem 1rem;border-radius:50px;font-size:.8rem;font-weight:600;letter-spacing:.5px;text-transform:uppercase;margin-bottom:1.5rem;}
+  .domain{font-size:clamp(2.8rem,9vw,6rem);font-weight:800;color:var(--green);letter-spacing:-2px;line-height:1;}
+  .domain span{color:var(--green-light);}
+  .tagline{font-size:clamp(1rem,2.5vw,1.3rem);color:var(--gray);margin:1.2rem 0 2.2rem;max-width:520px;line-height:1.6;}
+  .hero-btns{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;}
+  .btn-primary{background:var(--green);color:#fff;padding:.85rem 2rem;border-radius:50px;font-size:1rem;font-weight:700;text-decoration:none;transition:transform .2s,background .2s;box-shadow:0 4px 18px rgba(45,106,79,.25);}
+  .btn-primary:hover{background:var(--green-light);transform:translateY(-2px);}
+  .btn-secondary{background:transparent;color:var(--green);padding:.85rem 2rem;border-radius:50px;font-size:1rem;font-weight:700;text-decoration:none;border:2px solid var(--green);transition:all .2s;}
+  .btn-secondary:hover{background:var(--green-pale);}
+
+  /* STATS */
+  .stats{display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;padding:2.5rem 5%;background:var(--green);}
+  .stat{text-align:center;color:#fff;}
+  .stat h3{font-size:1.8rem;font-weight:800;}
+  .stat p{font-size:.8rem;opacity:.8;margin-top:.2rem;letter-spacing:.5px;text-transform:uppercase;}
+
+  /* WHY */
+  .section{padding:5rem 5%;max-width:1100px;margin:0 auto;}
+  .section-title{text-align:center;margin-bottom:3rem;}
+  .section-title h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;color:var(--dark);}
+  .section-title p{color:var(--gray);margin-top:.6rem;font-size:1rem;}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;}
+  .card{background:var(--white);border-radius:16px;padding:2rem 1.5rem;box-shadow:0 2px 16px rgba(0,0,0,.06);transition:transform .2s;}
+  .card:hover{transform:translateY(-4px);}
+  .card-icon{font-size:2rem;margin-bottom:1rem;}
+  .card h3{font-size:1.05rem;font-weight:700;margin-bottom:.5rem;color:var(--dark);}
+  .card p{font-size:.9rem;color:var(--gray);line-height:1.6;}
+
+  /* USE CASES */
+  .usecases{background:var(--green-pale);padding:4rem 5%;}
+  .usecases-inner{max-width:1100px;margin:0 auto;}
+  .tags{display:flex;flex-wrap:wrap;gap:.8rem;justify-content:center;margin-top:1.5rem;}
+  .tag{background:var(--white);color:var(--green);padding:.5rem 1.2rem;border-radius:50px;font-size:.9rem;font-weight:600;border:1.5px solid var(--green-light);}
+
+  /* OFFER FORM */
+  .offer-section{padding:5rem 5%;max-width:620px;margin:0 auto;text-align:center;}
+  .form-box{background:var(--white);border-radius:20px;padding:2.5rem 2rem;box-shadow:0 4px 30px rgba(0,0,0,.09);margin-top:2rem;text-align:left;}
+  .form-box label{display:block;font-size:.85rem;font-weight:600;color:var(--dark);margin-bottom:.4rem;margin-top:1.2rem;}
+  .form-box label:first-child{margin-top:0;}
+  .form-box input,.form-box textarea{width:100%;padding:.75rem 1rem;border:1.5px solid #e5e7eb;border-radius:10px;font-size:.95rem;outline:none;transition:border .2s;background:#fafafa;}
+  .form-box input:focus,.form-box textarea:focus{border-color:var(--green-light);}
+  .form-box textarea{resize:vertical;min-height:100px;}
+  .submit-btn{width:100%;margin-top:1.5rem;padding:1rem;background:var(--green);color:#fff;border:none;border-radius:50px;font-size:1rem;font-weight:700;cursor:pointer;transition:background .2s,transform .2s;}
+  .submit-btn:hover{background:var(--green-light);transform:translateY(-2px);}
+  .success-msg{display:none;background:var(--green-pale);color:var(--green);padding:1rem;border-radius:10px;text-align:center;font-weight:600;margin-top:1rem;}
+
+  /* FOOTER */
+  footer{background:var(--dark);color:#aaa;text-align:center;padding:2rem 5%;font-size:.85rem;}
+  footer span{color:var(--green-light);font-weight:600;}
+
+  /* RESPONSIVE */
+  @media(max-width:600px){
+    .stats{gap:1rem;}
+    .stat h3{font-size:1.4rem;}
+    .form-box{padding:1.5rem 1rem;}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">pansari<span>.shop</span></div>
+  <a href="#offer">Make an Offer</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="badge">🌿 Premium Domain For Sale</div>
+  <div class="domain">pansari<span>.shop</span></div>
+  <p class="tagline">A short, memorable, and niche-perfect domain for herbal, spice, or ayurvedic businesses. Own your brand before someone else does.</p>
+  <div class="hero-btns">
+    <a href="#offer" class="btn-primary">Make an Offer</a>
+    <a href="#why" class="btn-secondary">Why This Domain?</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><h3>7</h3><p>Characters</p></div>
+  <div class="stat"><h3>.shop</h3><p>TLD Extension</p></div>
+  <div class="stat"><h3>100%</h3><p>Brandable</p></div>
+  <div class="stat"><h3>1</h3><p>Available Now</p></div>
+</div>
+
+<!-- WHY -->
+<div id="why">
+<div class="section">
+  <div class="section-title">
+    <h2>Why pansari.shop is a Great Buy</h2>
+    <p>This domain ticks every box for a serious herbal or spice brand.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">🌱</div>
+      <h3>Niche Relevant</h3>
+      <p>"Pansari" is a well-known term in South Asian markets for herbal & spice stores — instant recognition.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">✂️</div>
+      <h3>Short & Catchy</h3>
+      <p>Only 7 characters. Easy to remember, easy to type, easy to brand.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🛒</div>
+      <h3>Commerce-Ready</h3>
+      <p>The .shop extension signals e-commerce instantly — perfect for selling herbs, spices, or ayurvedic products.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📈</div>
+      <h3>SEO Friendly</h3>
+      <p>Keyword-rich domain that gives your herbal business a natural head start in search rankings.</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- USE CASES -->
+<div class="usecases">
+  <div class="usecases-inner">
+    <div class="section-title">
+      <h2>Perfect For These Businesses</h2>
+      <p>Whoever you are, this domain fits your brand.</p>
+    </div>
+    <div class="tags">
+      <span class="tag">🌿 Herbal Store</span>
+      <span class="tag">🧄 Spice Shop</span>
+      <span class="tag">💊 Ayurvedic Products</span>
+      <span class="tag">🍵 Herbal Tea Brand</span>
+      <span class="tag">🧴 Natural Skincare</span>
+      <span class="tag">🌾 Organic Grocery</span>
+      <span class="tag">🏪 Desi Grocery Online</span>
+      <span class="tag">🌺 Wellness Brand</span>
+    </div>
+  </div>
+</div>
+
+<!-- OFFER FORM -->
+<div id="offer" class="offer-section">
+  <div class="section-title">
+    <h2>Interested? Make an Offer</h2>
+    <p>Fill in the form and the owner will get back to you shortly.</p>
+  </div>
+  <div class="form-box">
+    <label>Your Name</label>
+    <input type="text" id="name" placeholder="e.g. Rahul Sharma"/>
+    <label>Email Address</label>
+    <input type="email" id="email" placeholder="you@example.com"/>
+    <label>Your Offer (₹ / $)</label>
+    <input type="text" id="price" placeholder="e.g. ₹15,000"/>
+    <label>Message (optional)</label>
+    <textarea id="msg" placeholder="Tell us about your business or intended use..."></textarea>
+    <button class="submit-btn" onclick="submitOffer()">Submit Offer →</button>
+    <div class="success-msg" id="successMsg">✅ Your offer has been sent! We'll be in touch soon.</div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 <span>pansari.shop</span> — This domain is available for purchase. All rights reserved.</p>
+</footer>
+
+<script>
+  async function submitOffer(){
+    const name=document.getElementById('name').value.trim();
+    const email=document.getElementById('email').value.trim();
+    const price=document.getElementById('price').value.trim();
+    const message=document.getElementById('msg').value.trim();
+    if(!name||!email||!price){alert('Please fill in your name, email, and offer amount.');return;}
+
+    const btn=document.querySelector('.submit-btn');
+    btn.textContent='Sending...';
+    btn.disabled=true;
+
+    try{
+      const res=await fetch('https://formspree.io/f/mbdzdzkj',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body:JSON.stringify({name,email,offer:price,message})
+      });
+      if(res.ok){
+        const msg=document.getElementById('successMsg');
+        msg.style.display='block';
+        document.getElementById('name').value='';
+        document.getElementById('email').value='';
+        document.getElementById('price').value='';
+        document.getElementById('msg').value='';
+        setTimeout(()=>msg.style.display='none',5000);
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch(e){
+      alert('Network error. Please try again.');
+    }
+    btn.textContent='Submit Offer →';
+    btn.disabled=false;
+  }
+  // smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a=>{
+    a.addEventListener('click',e=>{
+      e.preventDefault();
+      document.querySelector(a.getAttribute('href'))?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
